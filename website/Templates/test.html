@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+                <div class="col-2">
+                    <div class="jumbotron">
+                        <a href="#">
+                            <img src="{{book['lien_image']}}" width="60" height="70">
+                            <p>{{book['titre']}}</p>
+                            <p>{{book['date_parution']}}</p>
+                            <p>{{book['prix']}}</p>
+                        </a>
+                    </div>
+                </div>
+{% endblock %}
+
+

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome sur la page des étudiants de IPOULE {% endblock %}</h1>
+
+        <div class="container">
+            <div class="row">
+                {% for livre in livres %}
+                <div class="col-2">
+                    <div class="jumbotron">
+                        <a href="{{url_for('livre', id_livre=livre['id'])}}">
+                            <img src="{{livre['lien_image']}}" width="60" height="70">
+                            <p>{{livre['titre']}}</p>
+                            <p>{{livre['date_parution']}}</p>
+                            <p>{{livre['prix']}}</p>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+{% endblock %}
